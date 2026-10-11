@@ -1,0 +1,28 @@
+[package]
+name = "pdf-page-h"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+authors = ["HexBrowns"]
+description = "PdfPage_H - PDF のページを画像のオブジェクトとして出す AviUtl2 プラグイン（Windows.Data.Pdf で描く）"
+publish = false
+
+[lib]
+name = "pdf_page_h"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+aviutl2 = { version = "0.49", features = ["generic", "filter"] }
+windows = { version = "0.62", features = [
+    "Foundation",
+    "Data_Pdf",
+    "Graphics_Imaging",
+    "Storage",
+    "Storage_Streams",
+    "UI",
+    "Win32_System_WinRT",
+] }
+windows-future = "0.3"
+
+[profile.release]
+lto = true
