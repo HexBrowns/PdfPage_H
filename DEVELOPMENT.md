@@ -1,6 +1,6 @@
 # PdfPage_H（開発メモ）
 
-PDF のページを画像のオブジェクトとして出す AviUtl2 の汎用プラグイン（`.aux2`）。使い方は `自作スクリプトマニュアル/PdfPage_H_Manual.md`、
+PDF のページを画像のオブジェクトとして出す AviUtl2 の汎用プラグイン（`.aux2`）。使い方は `AI/公開情報/PdfPage_H/PdfPage_H_Manual.md`、
 仕様と決定は `AI/specifications/20261009_PdfPage_H_spec.md`。
 
 - aviutl2-rs 0.49（最小サポートは本体 2.1.13）、`windows` 0.62（`Data_Pdf` `Graphics_Imaging` `Storage` `Storage_Streams`）
