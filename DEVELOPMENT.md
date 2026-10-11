@@ -15,7 +15,7 @@ PDF のページを画像のオブジェクトとして出す AviUtl2 の汎用�
 | `src/render.rs` | PDF に触らない計算（画素数・ページの丸め・キャッシュの鍵）。`cargo test` |
 | `examples/render_page.rs` | 机上の検証用。プラグインと同じ描き方で 1 ページを生の RGBA に書く |
 | `tests/make_test_pdf.py` | 試験用の 10 ページの PDF（外部ライブラリなし）。検証の節 `AI/tools/debug_items/pdf.py` も使う |
-| `tests/verify_judge.py` | 検証の節の判定が、正しい絵で通り、取り違えを再現した絵で落ちることを確かめる |
+| `tests/verify_judge.py` | 検証の節の判定が、正しい絵で通り、取り違えを再現した絵で落ちることを確かめる（開発用リポジトリの検証の道具に頼るので、公開側には出さない） |
 
 ## 確かめたこと（2026-10-11）
 
@@ -30,7 +30,7 @@ PDF のページを画像のオブジェクトとして出す AviUtl2 の汎用�
 ```bash
 cargo test                                    # 計算
 cargo build --release --example render_page
-python tests/verify_judge.py                  # 検証の節の判定（実際に描く）
+python tests/verify_judge.py                  # 検証の節の判定（実際に描く。開発用リポジトリだけ）
 ```
 
 `cargo test -- --ignored` は環境変数 `PDF_PAGE_H_TEST_PDF` の PDF を描く（先読みの速さも出す）。
